@@ -280,14 +280,59 @@
                 alert('Please enter a task !');
                 
             }else{
-                let li = document.createElement('li');
-            li.innerHTML = input.value;
-            todoContainer.appendChild(li);
-            let del = document.createElement('button');
-            del.textContent = "Del"
-            del.id="delbtn"
-            li.appendChild(del);
+                let currentDate = new Date();
+                    let options = {year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Asia/Kolkata' };
+                    let indianDate = currentDate.toLocaleDateString('en-IN', options);
+                    const currentTime = new Date();
 
+                    const hours = currentTime.getHours();
+                    const minutes = currentTime.getMinutes();
+                    const seconds = currentTime.getSeconds();
+
+                    const formattedHours = String(hours).padStart(2, '0');
+                    const formattedMinutes = String(minutes).padStart(2, '0');
+                    const formattedSeconds = String(seconds).padStart(2, '0');
+                    let timey = `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+
+                
+                let time = document.createElement('p');
+                time.innerText = timey;
+                time.id='time';
+                let extraInfo = document.querySelector('.extraInfo');
+
+                let showInfo = document.createElement('button');
+                
+                showInfo.textContent = ".";
+                showInfo.id= "showInfo";
+                showInfo.addEventListener('click', ()=>{
+                    extraInfo.innerText = ""
+                    extraInfo.classList.toggle('newDiv');
+                    extraInfo.appendChild(time);
+
+                })
+                showInfo.addEventListener('blur', ()=>{
+                    extraInfo.classList.toggle('extraInfo');
+                })
+                let li = document.createElement('li');
+                li.innerHTML = input.value;
+                todoContainer.appendChild(li);
+                let del = document.createElement('button');
+                del.textContent = "Del"
+                del.id="delbtn"
+                li.appendChild(del);
+                let d = document.createElement('p');
+                d.innerText = indianDate;
+                
+                d.classList.add('showdate');
+                
+                li.appendChild(showInfo);
+                
+                li.appendChild(d);
+                del.addEventListener('click', ()=>{
+                            li.innerHTML = "";
+                    })
+           
+           
             edit = document.createElement('button');
             edit.textContent = "edit";
             edit.id="editbtn"
@@ -309,20 +354,23 @@
                     newList.appendChild(del);
                     newList.appendChild(edit);
                     newList.appendChild(checkbox)
+                    del.addEventListener('click', ()=>{
+                        newList.innerHTML = "";
+                    })  
                 })
+                
                
 
 
+                
             })
+            
             
             checkbox = document.createElement('input');
             checkbox.type = "checkbox";
             checkbox.classList.add("checkboxx");
             li.appendChild(checkbox);
-            del.addEventListener('click', function(){
-                li.innerHTML = "";
-                
-            })
+            
             input.value="";
                 
             
