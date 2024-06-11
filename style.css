@@ -1,0 +1,301 @@
+    #main{
+        border: 2px solid black;
+        width: 746px;
+        min-height: 350px;
+        height:fit-content;
+        background-color: black;
+    }
+    #delbtn{
+        position: absolute;
+        left: 678px;
+        width: 41px;
+        height: 22px;
+        background-color: red;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    button{
+        cursor: pointer;
+    }
+    li{
+        margin-top: 10px;
+        list-style: none;
+        font-size: 22px;
+        color: white;
+    }
+    ul li.checked{
+        text-decoration: line-through;
+    }
+
+    .ha {
+        position: absolute;
+        left: 16px;
+        top: 48px;
+
+    }
+    .upperdisplay{
+        padding: 35px;
+        background-color:gray;
+        height: 28px;
+    }
+
+    .checkboxx{
+    position: absolute;
+    left: 0;
+
+    }
+    #input-task{ 
+    width: 312px;
+    font-size: larger;
+    height: 43px;
+    position: absolute;
+    top: 22px;
+    border-radius: 10px;
+    border: 1px solid;
+
+    }
+    #addTask{
+    width: 99px;
+    margin-left: 5px;
+    background-color: darkcyan;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 43px;
+    position: absolute;
+    top: 25px;
+    left: 370px;
+    }
+    #clearAllTasks{
+    width: 99px;
+    position: relative;
+    top: -12px;
+    left: 455px;
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 43px;
+
+    }
+
+    /* .ed{
+    height: 46px;
+    position: relative;
+    top: -17px;
+    left: -4px;
+    } */
+
+    .todo-container{
+    background-color: black;
+    }
+    #editbtn{
+    position: absolute;
+    left: 628px;
+    width: 41px;
+    height: 22px;
+    background-color: rgb(123, 123, 231);
+    border: 2px solid black;
+    border-radius: 5px;
+    }
+    #savebtn{
+    position: absolute;
+    left: 365px;
+    width: 55px;
+    height: 22px;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 5px;
+    top: 117px;
+    }
+    .showdate{
+    position: absolute;
+    right: 139px;
+    margin-top: -24px;
+    }
+
+    #showInfo{
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    width: 18px;
+    height: 17px;
+    position: absolute;
+    right: 8px;
+    margin-top: 3px;
+    }
+    .extraInfo{
+    display: none;
+
+    }
+    .newDiv{
+    display: block;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 14px;
+    position: absolute;
+    right: 17px;
+    margin-top: -217px;
+    }
+    .strikeThrough{
+    text-decoration: line-through;
+    }
+    #noTasksDisplay{
+    margin: 0px;
+    }
+    
+    @media (max-width: 500px){
+        #main{
+            border: 2px solid black;
+            width: 424px;
+            min-height: 350px;
+            height:fit-content;
+            background-color: black;
+            margin-left: -14px;
+        }
+        #delbtn{
+            position: absolute;
+            left: 352px;
+            width: 41px;
+            height: 22px;
+            background-color: red;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        button{
+            cursor: pointer;
+        }
+        li{
+            margin-top: 10px;
+            list-style: none;
+            font-size: 22px;
+            color: white;
+        }
+        ul li.checked{
+            text-decoration: line-through;
+        }
+    
+        .ha {
+            position: absolute;
+            left: 16px;
+            top: 48px;
+    
+        }
+        .upperdisplay{
+            padding: 30px 4px;
+            background-color:gray;
+            height: 28px;
+        }
+    
+        .checkboxx{
+        position: absolute;
+        left: 0;
+    
+        }
+        #input-task{ 
+        width: 185px;
+        font-size: larger;
+        margin-top: 0px;
+        height: 43px;
+        position: relative;
+        top: -16px;
+        left: -4px;
+        border-radius: 10px;
+        border: 1px solid;
+
+        }
+        #addTask{
+        width: 99px;
+        margin-left: 5px;
+        background-color: darkcyan;
+        border: 2px solid white;
+        border-radius: 10px;
+        height: 46px;
+        position: relative;
+        top: -17px;
+        left: -4px;
+        }
+        #clearAllTasks{
+        width: 99px;
+        position: absolute;
+        top: 17px;
+        left: 308px;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        height: 46px;
+    
+    
+        }
+    
+        /* .ed{
+        height: 46px;
+        position: relative;
+        top: -17px;
+        left: -4px;
+        } */
+    
+        .todo-container{
+        background-color: black;
+        }
+        #editbtn{
+        position: absolute;
+        left: 308px;
+        width: 41px;
+        height: 22px;
+        background-color: rgb(123, 123, 231);
+        border: 2px solid black;
+        border-radius: 5px;
+        }
+        #savebtn{
+        position: absolute;
+        left: 350px;
+        width: 55px;
+        height: 22px;
+        background-color: green;
+        border: 2px solid black;
+        border-radius: 5px;
+        }
+        .showdate{
+        position: absolute;
+        right: 108px;
+        margin-top: -24px;
+        }
+    
+        #showInfo{
+        border: none;
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+        width: 18px;
+        height: 17px;
+        position: absolute;
+        right: 1px;
+        margin-top: 3px;
+        }
+        .extraInfo{
+        display: none;
+    
+        }
+        .newDiv{
+        display: block;
+        background-color: black;
+        color: white;
+        width: 100px;
+        height: 100px;
+        border: 2px solid white;
+        border-radius: 14px;
+        position: absolute;
+        right: 17px;
+        margin-top: -217px;
+        }
+        .strikeThrough{
+        text-decoration: line-through;
+        }
+        #noTasksDisplay{
+        margin: 0px;
+        }
+        
+    }
