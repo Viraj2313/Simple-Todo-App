@@ -118,12 +118,14 @@
                 edit.textContent ="";
                 del.textContent="";
                 li.removeChild(d);
+                li.removeChild(edit);
+                li.removeChild(del);
                 let save = document.createElement('button');
                 save.textContent = "Save";
                 save.id="savebtn"
                 let inputItem = document.createElement('input');
                 todoContainer.appendChild(save);
-                inputItem.value = li.innerText;
+                inputItem.value = li.textContent;
                 li.parentNode.replaceChild(inputItem, li);
                 inputItem.focus();
                 save.addEventListener('click', ()=>{
